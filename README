@@ -4,9 +4,16 @@ README
 Overview
 --------
 
-This application is a simple shopping cart manager built with Symfony.
+This application is a simple shopping cart manager built with Symfony. It's a
+port of the original "Easy-Ajax" demo of symfony 1.x.
 
 Installation
 ------------
 
-To install it, just checkout the code in your web root, and run the application!
+To install it, just checkout the code in your web root, and run the check.php file.
+
+If there are some errors, you need to fix them before to go further. When all
+the issues are fixed (mostly write permission on cache/ and logs/ directories),
+run the index.php or index_dev.php file.
+
+Enjoy!
