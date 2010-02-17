@@ -14,6 +14,8 @@ To install it, just checkout the code in your web root, and run the check.php fi
 
 If there are some errors, you need to fix them before to go further. When all
 the issues are fixed (mostly write permission on cache/ and logs/ directories),
-run the index.php or index_dev.php file.
+run the index.php or index_dev.php file:
+
+http://localhost/sandbox/web/index_dev.php/cart
 
 Enjoy!
