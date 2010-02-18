@@ -47,8 +47,8 @@ EOF
 echo_title("Mandatory requirements");
 check(version_compare(phpversion(), '5.3.1', '>='), sprintf('Checking that PHP version is at least 5.3.1 (%s installed)', phpversion()), 'Install PHP 5.3.1 or newer (current version is '.phpversion(), true);
 check(ini_get('date.timezone'), 'Checking that the "date.timezone" setting is set', 'Set the "date.timezone" setting in php.ini (like Europe/Paris)', true);
-check(is_writable(__DIR__.'/../hello/cache'), sprintf('Checking that cache/ directory is writable'), 'Change the permissions of the hello/cache/ directory so that the web server can write in it', true);
-check(is_writable(__DIR__.'/../hello/logs'), sprintf('Checking that the logs/ directory is writable'), 'Change the permissions of the hello/logs/ directory so that the web server can write in it', true);
+check(is_writable(__DIR__.'/../cart/cache'), sprintf('Checking that cache/ directory is writable'), 'Change the permissions of the cart/cache/ directory so that the web server can write in it', true);
+check(is_writable(__DIR__.'/../cart/logs'), sprintf('Checking that the logs/ directory is writable'), 'Change the permissions of the cart/logs/ directory so that the web server can write in it', true);
 
 // warnings
 echo_title("Optional checks");
