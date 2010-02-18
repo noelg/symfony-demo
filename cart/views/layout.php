@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Symfony 2 Shopping Cart Demo</title>
     <?php echo $view->stylesheets ?>
     <?php echo $view->javascripts ?>
   </head>
