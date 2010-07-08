@@ -5,20 +5,14 @@
     xsi:schemaLocation="http://www.symfony-project.org/schema/routing http://www.symfony-project.org/schema/routing/routing-1.0.xsd">
 
   <route id="cart" pattern="/cart">
-	<default key="_bundle">CartBundle</default>
-	<default key="_controller">Cart</default>
-	<default key="_action">index</default>
+	<default key="_controller">CartBundle:Cart:index</default>
   </route>
   
   <route id="cart_add" pattern="/cart/add/:id">
-	<default key="_bundle">CartBundle</default>
-	<default key="_controller">Cart</default>
-	<default key="_action">add</default>
+	<default key="_controller">CartBundle:Cart:add</default>
   </route>
   
   <route id="cart_remove" pattern="/cart/remove/:id">
-	<default key="_bundle">CartBundle</default>
-	<default key="_controller">Cart</default>
-	<default key="_action">remove</default>
+	<default key="_controller">CartBundle:Cart:remove</default>
   </route>
 </routes>

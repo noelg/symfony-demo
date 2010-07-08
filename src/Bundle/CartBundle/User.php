@@ -11,8 +11,8 @@ namespace Bundle\CartBundle;
  * with this source code in the file LICENSE.
  */
 
-
-use Symfony\Framework\WebBundle\User as BaseUser;
+//use Symfony\Framework\FoundationBundle\Controller;
+use Symfony\Framework\FoundationBundle\User as BaseUser;
 
 class User extends BaseUser
 {

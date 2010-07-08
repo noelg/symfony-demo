@@ -11,7 +11,7 @@ namespace Bundle\CartBundle\Controller;
  * with this source code in the file LICENSE.
  */
 
-use Symfony\Framework\WebBundle\Controller;
+use Symfony\Framework\FoundationBundle\Controller;
 use Bundle\CartBundle\Model\Product;
 
 class CartController extends Controller

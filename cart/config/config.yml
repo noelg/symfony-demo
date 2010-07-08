@@ -1,5 +1,9 @@
+parameters:
+    kernel.include_core_classes: false
+
 kernel.config: ~
-web.web: ~
+web.config: ~
 web.templating: ~
+
 web.user:
   class: Bundle\CartBundle\User

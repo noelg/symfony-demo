@@ -2,11 +2,11 @@
 
 namespace Symfony\Framework\DoctrineBundle\Logger;
 
-use Symfony\Foundation\LoggerInterface;
+use Symfony\Components\HttpKernel\LoggerInterface;
 use Doctrine\DBAL\Logging\DebugStack;
 
 /*
- * This file is part of the symfony framework.
+ * This file is part of the Symfony framework.
  *
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
  *
@@ -15,42 +15,45 @@ use Doctrine\DBAL\Logging\DebugStack;
  */
 
 /**
- * 
+ * DbalLogger.
  *
- * @package    symfony
+ * @package    Symfony
+ * @subpackage Framework_DoctrineBundle
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
  */
 class DbalLogger extends DebugStack
 {
-  protected $logger;
+    protected $logger;
 
-  /**
-   * Constructor.
-   *
-   * @param LoggerInterface $logger A LoggerInterface instance
-   */
-  public function __construct(LoggerInterface $logger = null)
-  {
-    $this->logger = $logger;
-  }
-
-  public function logSql($sql, array $params = null)
-  {
-    parent::logSql($sql, $params);
-
-    if (null !== $this->logger)
+    /**
+     * Constructor.
+     *
+     * @param LoggerInterface $logger A LoggerInterface instance
+     */
+    public function __construct(LoggerInterface $logger = null)
     {
-      $this->log($sql.' ('.str_replace("\n", '', var_export($params, true)).')');
+        $this->logger = $logger;
     }
-  }
 
-  /**
-   * Logs a message.
-   *
-   * @param string $message A message to log
-   */
-  public function log($message)
-  {
-    $this->logger->info($message);
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function logSQL($sql, array $params = null, $executionMS = null)
+    {
+        parent::logSql($sql, $params, $executionMS);
+
+        if (null !== $this->logger) {
+            $this->log($sql.' ('.str_replace("\n", '', var_export($params, true)).')');
+        }
+    }
+
+    /**
+     * Logs a message.
+     *
+     * @param string $message A message to log
+     */
+    public function log($message)
+    {
+        $this->logger->info($message);
+    }
 }

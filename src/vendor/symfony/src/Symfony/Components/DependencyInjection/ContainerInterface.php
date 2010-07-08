@@ -3,7 +3,7 @@
 namespace Symfony\Components\DependencyInjection;
 
 /*
- * This file is part of the symfony framework.
+ * This file is part of the Symfony framework.
  *
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
  *
@@ -14,27 +14,44 @@ namespace Symfony\Components\DependencyInjection;
 /**
  * ContainerInterface is the interface implemented by service container classes.
  *
- * @package    symfony
- * @subpackage dependency_injection
+ * @package    Symfony
+ * @subpackage Components_DependencyInjection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
  */
 interface ContainerInterface
 {
-  public function setParameters(array $parameters);
+    const EXCEPTION_ON_INVALID_REFERENCE = 1;
+    const NULL_ON_INVALID_REFERENCE      = 2;
+    const IGNORE_ON_INVALID_REFERENCE    = 3;
 
-  public function addParameters(array $parameters);
+    /**
+     * Sets a service.
+     *
+     * @param string $id      The service identifier
+     * @param object $service The service instance
+     */
+    public function set($id, $service);
 
-  public function getParameters();
+    /**
+     * Gets a service.
+     *
+     * @param  string $id              The service identifier
+     * @param  int    $invalidBehavior The behavior when the service does not exist
+     *
+     * @return object The associated service
+     *
+     * @throws \InvalidArgumentException if the service is not defined
+     *
+     * @see Reference
+     */
+    public function get($id, $invalidBehavior = self::EXCEPTION_ON_INVALID_REFERENCE);
 
-  public function getParameter($name);
-
-  public function setParameter($name, $value);
-
-  public function hasParameter($name);
-
-  public function setService($id, $service);
-
-  public function getService($id);
-
-  public function hasService($name);
+    /**
+     * Returns true if the given service is defined.
+     *
+     * @param  string  $id      The service identifier
+     *
+     * @return Boolean true if the service is defined, false otherwise
+     */
+    public function has($id);
 }
