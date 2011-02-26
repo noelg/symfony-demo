@@ -1,0 +1,12 @@
+{% for product_id, quantity in cart %}
+<div>
+  {% for i in range(1, quantity) %}
+    <a title="Remove this item" href="{{ path('cart_remove', {'id': product_id}) }}">
+      <img alt="" src="{{ asset('bundles/cart/images/' ~ product_id ~ '.png') }}" class="cart-items" id="item_{{ product_id }}_{{ i }}" style="position:relative" />
+    </a>
+  {% endfor %}
+  <span>({{ quantity }} {{ products[product_id] }})</span>
+</div>
+{% else %}
+	nothing yet in your shopping cart.
+{% endfor %}

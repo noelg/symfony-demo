@@ -1,9 +1,14 @@
-parameters:
-    kernel.include_core_classes: false
+framework:
+    charset:       UTF-8
+    error_handler: null
+    router:        { resource: "%kernel.root_dir%/config/routing.yml" }
+    templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
+    session:
+        default_locale: en
+        lifetime:       3600
+        auto_start:     true
 
-kernel.config: ~
-web.config: ~
-web.templating: ~
-
-web.user:
-  class: Bundle\CartBundle\User
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%

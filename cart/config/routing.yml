@@ -1,6 +1,2 @@
-homepage:
-    pattern:  /
-    defaults: { _controller: FoundationBundle:Default:index }
-
 cart:
-  resource: CartBundle/Resources/config/routing.xml
+    resource: "@CartBundle/Resources/config/routing.xml"

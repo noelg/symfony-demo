@@ -8,11 +8,11 @@
 	<default key="_controller">CartBundle:Cart:index</default>
   </route>
   
-  <route id="cart_add" pattern="/cart/add/:id">
+  <route id="cart_add" pattern="/cart/add/{id}">
 	<default key="_controller">CartBundle:Cart:add</default>
   </route>
   
-  <route id="cart_remove" pattern="/cart/remove/:id">
+  <route id="cart_remove" pattern="/cart/remove/{id}">
 	<default key="_controller">CartBundle:Cart:remove</default>
   </route>
 </routes>

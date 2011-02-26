@@ -1,11 +1,16 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__.'/HelloKernel.php';
+require_once __DIR__.'/bootstrap.php';
+require_once __DIR__.'/CartKernel.php';
 
-use Symfony\Framework\FoundationBundle\Console\Application;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
 
-$kernel = new HelloKernel('dev', true);
+$input = new ArgvInput();
+$env = $input->getParameterOption(array('--env', '-e'), 'dev');
+$debug = $input->hasParameterOption(array('--debug', '-d'));
 
+$kernel = new CartKernel($env, $debug);
 $application = new Application($kernel);
 $application->run();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\CartBundle\Model;
+namespace Demo\CartBundle\Model;
 
 /**
  *  This file is a part of the symfony demo application

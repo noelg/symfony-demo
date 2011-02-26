@@ -1,10 +1,14 @@
 imports:
     - { resource: config_dev.yml }
 
-web.config:
+framework:
+    error_handler: false
+    test: ~
+
+web_profiler:
     toolbar: false
+    intercept_redirects: false
 
-zend.logger:
-    priority: debug
-
-kernel.test: ~
+zend:
+    logger:
+        priority: debug

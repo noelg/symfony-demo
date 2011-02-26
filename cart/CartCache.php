@@ -2,8 +2,8 @@
 
 require_once __DIR__.'/CartKernel.php';
 
-use Symfony\Foundation\Cache\Cache;
+use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
-class CartCache extends Cache
+class CartCache extends HttpCache
 {
 }

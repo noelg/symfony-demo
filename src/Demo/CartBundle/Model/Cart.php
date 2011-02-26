@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\CartBundle;
+namespace Demo\CartBundle\Model;
 
 /**
  *  This file is a part of the symfony demo application
@@ -11,11 +11,20 @@ namespace Bundle\CartBundle;
  * with this source code in the file LICENSE.
  */
 
-//use Symfony\Framework\FoundationBundle\Controller;
-use Symfony\Framework\FoundationBundle\User as BaseUser;
-
-class User extends BaseUser
+class Cart
 {
+  protected $session;
+
+  /**
+   * Constructs the Cart instance
+   *
+   * @param Session $session 
+   */
+  public function __construct($session)
+  {
+    $this->session = $session;
+  }
+
   public function addItem($id)
   {
     $cart = $this->getCart();
@@ -29,7 +38,7 @@ class User extends BaseUser
       ++$cart[$id];
     }
 
-    $this->setAttribute('cart', $cart);
+    $this->session->set('cart', $cart);
   }
 
   public function removeItem($id)
@@ -41,11 +50,11 @@ class User extends BaseUser
       unset($cart[$id]);
     }
 
-    $this->setAttribute('cart', $cart);
+    $this->session->set('cart', $cart);
   }
 
   public function getCart()
   {
-    return $this->getAttribute('cart', array());
+    return $this->session->get('cart', array());
   }
 }
