@@ -86,8 +86,8 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses all imports
      *
-     * @param array $content 
-     * @param string $file 
+     * @param array $content
+     * @param string $file
      * @return void
      */
     protected function parseImports($content, $file)
@@ -105,8 +105,8 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses interface injectors.
      *
-     * @param array $content 
-     * @param string $file 
+     * @param array $content
+     * @param string $file
      * @return void
      */
     protected function parseInterfaceInjectors($content, $file)
@@ -142,8 +142,8 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses definitions
      *
-     * @param array $content 
-     * @param string $file 
+     * @param array $content
+     * @param string $file
      * @return void
      */
     protected function parseDefinitions($content, $file)
@@ -160,9 +160,9 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses a definition.
      *
-     * @param string $id 
-     * @param array $service 
-     * @param string $file 
+     * @param string $id
+     * @param array $service
+     * @param string $file
      * @return void
      */
     protected function parseDefinition($id, $service, $file)
@@ -261,7 +261,7 @@ class YamlFileLoader extends FileLoader
     /**
      * Loads a YAML file.
      *
-     * @param string $file 
+     * @param string $file
      * @return array The file content
      */
     protected function loadFile($file)
@@ -304,7 +304,7 @@ class YamlFileLoader extends FileLoader
     /**
      * Resolves services.
      *
-     * @param string $value 
+     * @param string $value
      * @return void
      */
     protected function resolveServices($value)
@@ -336,7 +336,7 @@ class YamlFileLoader extends FileLoader
     /**
      * Loads from Extensions
      *
-     * @param array $content 
+     * @param array $content
      * @return void
      */
     protected function loadFromExtensions($content)

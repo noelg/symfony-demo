@@ -51,7 +51,7 @@ class WebDebugToolbarListenerTest extends \PHPUnit_Framework_TestCase
             <head></head>
             <body>
             <textarea><html><head></head><body></body></html></textarea>
-            
+
 WDT
 </body>
             </html>"),

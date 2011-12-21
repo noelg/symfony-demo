@@ -237,7 +237,7 @@ class ArrayNode extends BaseNode implements PrototypeNodeInterface
     /**
      * Sets the node prototype.
      *
-     * @param PrototypeNodeInterface $node 
+     * @param PrototypeNodeInterface $node
      * @throws \RuntimeException if the node doesnt have concrete children
      */
     public function setPrototype(PrototypeNodeInterface $node)
@@ -276,7 +276,7 @@ class ArrayNode extends BaseNode implements PrototypeNodeInterface
     /**
      * Finalises the value of this node.
      *
-     * @param mixed $value 
+     * @param mixed $value
      * @return mixed The finalised value
      * @throws UnsetKeyException
      * @throws InvalidConfigurationException if the node doesnt have enough children

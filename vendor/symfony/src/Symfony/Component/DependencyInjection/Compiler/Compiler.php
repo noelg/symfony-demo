@@ -71,7 +71,7 @@ class Compiler
     /**
      * Adds a log message.
      *
-     * @param string $string The log message 
+     * @param string $string The log message
      */
     public function addLogMessage($string)
     {
@@ -91,7 +91,7 @@ class Compiler
     /**
      * Run the Compiler and process all Passes.
      *
-     * @param ContainerBuilder $container 
+     * @param ContainerBuilder $container
      */
     public function compile(ContainerBuilder $container)
     {

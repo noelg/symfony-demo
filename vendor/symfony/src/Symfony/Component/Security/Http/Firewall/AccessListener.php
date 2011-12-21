@@ -53,7 +53,7 @@ class AccessListener implements ListenerInterface
     {
         $dispatcher->connect('core.security', array($this, 'handle'), 0);
     }
-    
+
     /**
      * {@inheritDoc}
      */

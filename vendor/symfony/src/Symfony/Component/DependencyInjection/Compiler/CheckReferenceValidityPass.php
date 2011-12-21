@@ -29,7 +29,7 @@ class CheckReferenceValidityPass implements CompilerPassInterface
     /**
      * Processes the ContainerBuilder to validate References.
      *
-     * @param ContainerBuilder $container 
+     * @param ContainerBuilder $container
      */
     public function process(ContainerBuilder $container)
     {
@@ -100,8 +100,8 @@ class CheckReferenceValidityPass implements CompilerPassInterface
     /**
      * Validates the scope of a single Reference.
      *
-     * @param Reference $reference 
-     * @param Definition $definition 
+     * @param Reference $reference
+     * @param Definition $definition
      * @throws \RuntimeException when there is an issue with the Reference scope
      */
     protected function validateScope(Reference $reference, Definition $definition = null)

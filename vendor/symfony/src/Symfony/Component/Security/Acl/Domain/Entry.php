@@ -122,10 +122,10 @@ class Entry implements AuditableEntryInterface
 
     /**
      * Turns on/off auditing on permissions denials.
-     * 
+     *
      * Do never call this method directly. Use the respective methods on the
      * AclInterface instead.
-     * 
+     *
      * @param Boolean $boolean
      * @return void
      */
@@ -136,10 +136,10 @@ class Entry implements AuditableEntryInterface
 
     /**
      * Turns on/off auditing on permission grants.
-     * 
+     *
      * Do never call this method directly. Use the respective methods on the
      * AclInterface instead.
-     * 
+     *
      * @param Boolean $boolean
      * @return void
      */
@@ -153,7 +153,7 @@ class Entry implements AuditableEntryInterface
      *
      * Do never call this method directly. Use the respective methods on the
      * AclInterface instead.
-     * 
+     *
      * @param integer $mask
      * @return void
      */
@@ -167,7 +167,7 @@ class Entry implements AuditableEntryInterface
      *
      * Do never call this method directly. Use the respective methods on the
      * AclInterface instead.
-     * 
+     *
      * @param string $strategy
      * @return void
      */
