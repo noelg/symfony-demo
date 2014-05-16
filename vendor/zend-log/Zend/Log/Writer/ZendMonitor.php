@@ -51,7 +51,7 @@ class ZendMonitor extends AbstractWriter
 
     /**
      * Create a new instance of Zend_Log_Writer_ZendMonitor
-     * 
+     *
      * @param  array|\Zend\Config\Config $config
      * @return \Zend\Log\Writer\Syslog
      */

@@ -55,8 +55,8 @@ abstract class BaseNode implements NodeInterface
     /**
      * Adds an equivilent value.
      *
-     * @param mixed $originalValue 
-     * @param mixed $equivalentValue 
+     * @param mixed $originalValue
+     * @param mixed $equivalentValue
      * @return void
      */
     public function addEquivalentValue($originalValue, $equivalentValue)
@@ -78,7 +78,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Sets if this node can be overridden.
      *
-     * @param boolean $allow 
+     * @param boolean $allow
      * @return void
      */
     public function setAllowOverwrite($allow)
@@ -111,7 +111,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Checks if this node is required.
      *
-     * @return boolean 
+     * @return boolean
      */
     public function isRequired()
     {
@@ -147,8 +147,8 @@ abstract class BaseNode implements NodeInterface
     /**
      * Merges two values together.
      *
-     * @param mixed $leftSide 
-     * @param mixed $rightSide 
+     * @param mixed $leftSide
+     * @param mixed $rightSide
      * @return mixed The merged value
      * @throws ForbiddenOverwriteException
      */
@@ -199,7 +199,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Finalizes a value, applying all finalization closures.
      *
-     * @param mixed $value The value to finalize 
+     * @param mixed $value The value to finalize
      * @return mixed The finalized value
      */
     public final function finalize($value)
@@ -235,7 +235,7 @@ abstract class BaseNode implements NodeInterface
      * @throws \InvalidTypeException when the value is invalid
      */
     abstract protected function validateType($value);
-    
+
     /**
      * Normalizes the value.
      *
@@ -243,16 +243,16 @@ abstract class BaseNode implements NodeInterface
      * @return mixed The normalized value
      */
     abstract protected function normalizeValue($value);
-    
+
     /**
      * Merges two values together
      *
-     * @param mixed $leftSide 
-     * @param mixed $rightSide 
+     * @param mixed $leftSide
+     * @param mixed $rightSide
      * @return mixed The merged value
      */
     abstract protected function mergeValues($leftSide, $rightSide);
-    
+
     /**
      * Finalizes a value
      *

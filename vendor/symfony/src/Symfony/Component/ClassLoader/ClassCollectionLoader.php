@@ -174,7 +174,7 @@ class ClassCollectionLoader
      *
      * @throws \RuntimeException when a cache file cannot be written
      */
-     
+
     static protected function writeCacheFile($file, $content)
     {
         $tmpFile = tempnam(dirname($file), basename($file));

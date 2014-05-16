@@ -19,7 +19,7 @@ class ResolveDefinitionTemplatesPass implements CompilerPassInterface
     /**
      * Process the ContainerBuilder to replace DefinitionDecorator instances with their real Definition instances.
      *
-     * @param ContainerBuilder $container 
+     * @param ContainerBuilder $container
      */
     public function process(ContainerBuilder $container)
     {
@@ -40,7 +40,7 @@ class ResolveDefinitionTemplatesPass implements CompilerPassInterface
      * Resolves the definition
      *
      * @param string $id The definition identifier
-     * @param DefinitionDecorator $definition 
+     * @param DefinitionDecorator $definition
      * @return Definition
      */
     protected function resolveDefinition($id, DefinitionDecorator $definition)

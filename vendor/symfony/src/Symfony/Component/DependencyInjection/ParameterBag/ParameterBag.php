@@ -12,7 +12,7 @@
 namespace Symfony\Component\DependencyInjection\ParameterBag;
 
 /**
- * 
+ *
  * @author Fabien Potencier <fabien.potencier@symfony-project.com>
  */
 class ParameterBag implements ParameterBagInterface
@@ -149,7 +149,7 @@ class ParameterBag implements ParameterBagInterface
      *
      * @see resolveValue
      *
-     * @param array $match 
+     * @param array $match
      * @return string
      */
     protected function resolveValueCallback($match)

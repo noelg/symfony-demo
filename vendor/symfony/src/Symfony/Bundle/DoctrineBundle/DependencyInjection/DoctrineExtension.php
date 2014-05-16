@@ -162,7 +162,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
             } else {
                 $configConnections[$mergedConfig['default_connection']] = $config;
             }
-            
+
             foreach ($configConnections as $name => $connection) {
                 $connectionName = isset($connection['name']) ? $connection['name'] : $name;
                 if (!isset($mergedConfig['connections'][$connectionName])) {
@@ -258,7 +258,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
         $loader->load('orm.xml');
 
         $config = $this->mergeOrmConfig($configs, $container);
-        
+
         $options = array('default_entity_manager', 'default_connection', 'auto_generate_proxy_classes');
         foreach ($options as $key) {
             $container->setParameter('doctrine.orm.'.$key, $config[$key]);
@@ -310,7 +310,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
             'entity_manager_class'          => $container->getParameter('doctrine.orm.entity_manager_class'),
             'class_metadata_factory_name'   => $container->getParameter('doctrine.orm.class_metadata_factory_name'),
         );
-        
+
         foreach ($configs as $config) {
             if (isset($config['default-entity-manager'])) {
                 $mergedConfig['default_entity_manager'] = $config['default-entity-manager'];
@@ -345,7 +345,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
                 if (isset($config['entity_managers']['entity_manager']) && isset($config['entity_managers']['entity_manager'][0])) {
                     $configEntityManagers = $config['entity_managers']['entity_manager'];
                 }
-                
+
                 foreach ($configEntityManagers as $name => $entityManager) {
                     $name = isset($entityManager['name']) ? $entityManager['name'] : $name;
                     $entityManagers[$name] = $entityManager;
@@ -482,7 +482,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
 
         $this->loadMappingInformation($entityManager, $container);
         $this->registerMappingDrivers($entityManager, $container);
-        
+
         $ormConfigDef->addMethodCall('setEntityNamespaces', array($this->aliasMap));
     }
 

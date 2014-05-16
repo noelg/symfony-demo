@@ -39,7 +39,7 @@ class WebProfilerExtension extends Extension
             $this->doConfigLoad($config, $container);
         }
     }
-    
+
 
     /**
      * Loads the web profiler configuration.

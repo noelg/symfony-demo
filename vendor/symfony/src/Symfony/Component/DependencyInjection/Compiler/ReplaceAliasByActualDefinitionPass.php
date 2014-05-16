@@ -25,7 +25,7 @@ class ReplaceAliasByActualDefinitionPass implements CompilerPassInterface
     /**
      * Process the Container to replace aliases with service definitions.
      *
-     * @param ContainerBuilder $container 
+     * @param ContainerBuilder $container
      */
     public function process(ContainerBuilder $container)
     {

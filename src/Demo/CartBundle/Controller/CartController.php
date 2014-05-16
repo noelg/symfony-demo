@@ -4,7 +4,7 @@ namespace Demo\CartBundle\Controller;
 
 /**
  *  This file is a part of the symfony demo application
- * 
+ *
  * (c) Noël GUILBERT <noelguilbert@gmail.com>
  *
  * This source file is subject to the MIT license that is bundled

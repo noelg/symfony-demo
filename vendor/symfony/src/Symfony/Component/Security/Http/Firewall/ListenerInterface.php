@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Interface that must be implemented by firewall listeners
- * 
+ *
  * @author Johannes M. Schmitt <schmittjoh@gmail.com>
  */
 interface ListenerInterface

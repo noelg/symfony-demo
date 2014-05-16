@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Data collector for the Doctrine MongoDB ODM.
- * 
+ *
  * @author Kris Wallsmith <kris.wallsmith@symfony-project.com>
  */
 class DoctrineMongoDBDataCollector extends DataCollector

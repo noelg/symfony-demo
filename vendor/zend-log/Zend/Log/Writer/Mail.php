@@ -117,10 +117,10 @@ class Mail extends AbstractWriter
         $this->_layout    = $layout;
         $this->_formatter = new Log\Formatter\Simple();
     }
-    
+
     /**
      * Create a new instance of Zend_Log_Writer_Mail
-     * 
+     *
      * @param  array|\Zend\Config\Config $config
      * @return \Zend\Log\Writer\Mail
      * @throws \Zend\Log\Exception\NotImplementedException

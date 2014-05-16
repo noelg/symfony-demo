@@ -55,7 +55,7 @@ EOT
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $connection = $this->getDoctrineConnection($input->getOption('connection'));
-        
+
         $params = $connection->getParams();
 
         $name = isset($params['path'])?$params['path']:(isset($params['dbname'])?$params['dbname']:false);

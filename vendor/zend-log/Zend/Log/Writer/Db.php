@@ -72,7 +72,7 @@ class Db extends AbstractWriter
 
     /**
      * Create a new instance of Zend_Log_Writer_Db
-     * 
+     *
      * @param  array|\Zend\Config\Config $config
      * @return \Zend\Log\Writer\Db
      */
@@ -98,7 +98,7 @@ class Db extends AbstractWriter
 
     /**
      * Formatting is not possible on this writer
-     * 
+     *
      * @throws \Zend\Log\Exception\InvalidArgumentException
      */
     public function setFormatter(\Zend\Log\Formatter $formatter)

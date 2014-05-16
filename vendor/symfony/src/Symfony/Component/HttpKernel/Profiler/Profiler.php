@@ -263,7 +263,7 @@ class Profiler
         foreach ($this->collectors as $collector) {
             $collector->collect($request, $response, $exception);
         }
-        
+
         $this->ip     = $request->server->get('REMOTE_ADDR');
         $this->url    = $request->getUri();
         $this->time   = time();

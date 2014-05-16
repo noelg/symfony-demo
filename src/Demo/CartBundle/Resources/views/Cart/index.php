@@ -18,7 +18,7 @@
   </div>
 
   <h2>Cart:</h2>
-  
+
   <div id="wastebin" style="float:right">
     <img id="wastebin" src="<?php echo $view->assets->getUrl('bundles/cart/images/trash.png') ?>" alt="" />
   </div>

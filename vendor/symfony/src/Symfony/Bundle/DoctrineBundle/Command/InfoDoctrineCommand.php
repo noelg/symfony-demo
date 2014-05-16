@@ -60,7 +60,7 @@ EOT
 
         $output->write(sprintf("Found %d entities mapped in entity manager '%s':",
             count($entityClassNames), $entityManagerName), true);
-        
+
         foreach ($entityClassNames AS $entityClassName) {
             try {
                 $cm = $entityManager->getClassMetadata($entityClassName);

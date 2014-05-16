@@ -134,8 +134,8 @@ EOF;
     /**
      * Generates Service local temp variables.
      *
-     * @param string $cId 
-     * @param string $definition 
+     * @param string $cId
+     * @param string $definition
      * @return string
      */
     protected function addServiceLocalTempVariables($cId, $definition)
@@ -182,7 +182,7 @@ EOF;
      * Generates the require_once statement for service includes.
      *
      * @param string $id The service id
-     * @param Definition $definition 
+     * @param Definition $definition
      * @return string
      */
     protected function addServiceInclude($id, $definition)
@@ -210,8 +210,8 @@ EOF;
     /**
      * Generates the inline definition of a service.
      *
-     * @param string $id 
-     * @param Definition $definition 
+     * @param string $id
+     * @param Definition $definition
      * @return string
      */
     protected function addServiceInlinedDefinitions($id, $definition)
@@ -288,7 +288,7 @@ EOF;
      * Adds the service return statement.
      *
      * @param string $id Service id
-     * @param Definition $definition 
+     * @param Definition $definition
      * @return string
      */
     protected function addServiceReturn($id, $definition)
@@ -304,7 +304,7 @@ EOF;
      * Generates the service instance.
      *
      * @param string $id
-     * @param Definition $definition 
+     * @param Definition $definition
      * @return string
      *
      * @throws \InvalidArgumentException
@@ -365,8 +365,8 @@ EOF;
     /**
      * Checks if the definition is a simple instance.
      *
-     * @param string $id 
-     * @param Definition $definition 
+     * @param string $id
+     * @param Definition $definition
      * @return boolean
      */
     protected function isSimpleInstance($id, $definition)
@@ -387,9 +387,9 @@ EOF;
     /**
      * Adds method calls to a service definition.
      *
-     * @param string $id 
-     * @param Definition $definition 
-     * @param string $variableName 
+     * @param string $id
+     * @param Definition $definition
+     * @param string $variableName
      * @return string
      */
     protected function addServiceMethodCalls($id, $definition, $variableName = 'instance')
@@ -414,8 +414,8 @@ EOF;
     /**
      * Generates the inline definition setup.
      *
-     * @param string $id 
-     * @param Definition $definition 
+     * @param string $id
+     * @param Definition $definition
      * @return string
      */
     protected function addServiceInlinedDefinitionsSetup($id, $definition)
@@ -452,9 +452,9 @@ EOF;
     /**
      * Adds configurator definition
      *
-     * @param string $id 
-     * @param Definition $definition 
-     * @param string $variableName 
+     * @param string $id
+     * @param Definition $definition
+     * @param string $variableName
      * @return string
      */
     protected function addServiceConfigurator($id, $definition, $variableName = 'instance')
@@ -477,8 +477,8 @@ EOF;
     /**
      * Adds a service
      *
-     * @param string $id 
-     * @param Definition $definition 
+     * @param string $id
+     * @param Definition $definition
      * @return string
      */
     protected function addService($id, $definition)
@@ -566,8 +566,8 @@ EOF;
     /**
      * Adds a service alias.
      *
-     * @param string $alias 
-     * @param string $id 
+     * @param string $alias
+     * @param string $id
      * @return string
      */
     protected function addServiceAlias($alias, $id)
@@ -795,8 +795,8 @@ EOF;
     /**
      * Exports parameters.
      *
-     * @param string $parameters 
-     * @param integer $indent 
+     * @param string $parameters
+     * @param integer $indent
      * @return string
      */
     protected function exportParameters($parameters, $indent = 12)
@@ -837,8 +837,8 @@ EOF;
     /**
      * Wraps the service conditionals.
      *
-     * @param string $value 
-     * @param string $code 
+     * @param string $value
+     * @param string $code
      * @return string
      */
     protected function wrapServiceConditionals($value, $code)
@@ -861,7 +861,7 @@ EOF;
     /**
      * Builds service calls from arguments
      *
-     * @param array $arguments 
+     * @param array $arguments
      * @param string $calls By reference
      * @param string $behavior By reference
      * @return void
@@ -891,7 +891,7 @@ EOF;
     /**
      * Returns the inline definition
      *
-     * @param Definition $definition 
+     * @param Definition $definition
      * @return string
      */
     protected function getInlinedDefinitions(Definition $definition)
@@ -914,7 +914,7 @@ EOF;
     /**
      * Gets the definition from arguments
      *
-     * @param array $arguments 
+     * @param array $arguments
      * @return array
      */
     protected function getDefinitionsFromArguments(array $arguments)
@@ -938,8 +938,8 @@ EOF;
     /**
      * Checks if a service id has a reference
      *
-     * @param string $id 
-     * @param array $arguments 
+     * @param string $id
+     * @param array $arguments
      * @return boolean
      */
     protected function hasReference($id, array $arguments)
@@ -962,8 +962,8 @@ EOF;
     /**
      * Dumps values.
      *
-     * @param string $value 
-     * @param boolean $interpolate 
+     * @param string $value
+     * @param boolean $interpolate
      * @return string
      */
     protected function dumpValue($value, $interpolate = true)
@@ -1046,7 +1046,7 @@ EOF;
     /**
      * Dumps a parameter
      *
-     * @param string $name 
+     * @param string $name
      * @return string
      */
     public function dumpParameter($name)
@@ -1061,8 +1061,8 @@ EOF;
     /**
      * Gets a service call
      *
-     * @param string $id 
-     * @param Reference $reference 
+     * @param string $id
+     * @param Reference $reference
      * @return string
      */
     protected function getServiceCall($id, Reference $reference = null)

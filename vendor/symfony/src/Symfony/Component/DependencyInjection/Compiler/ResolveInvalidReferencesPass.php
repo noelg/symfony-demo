@@ -26,7 +26,7 @@ class ResolveInvalidReferencesPass implements CompilerPassInterface
     protected $container;
     protected $exceptions;
 
-    /** 
+    /**
      * Constructor.
      *
      * @param array $exceptions An array of exceptions
@@ -49,7 +49,7 @@ class ResolveInvalidReferencesPass implements CompilerPassInterface
     /**
      * Process the ContainerBuilder to resolve invalid references.
      *
-     * @param ContainerBuilder $container 
+     * @param ContainerBuilder $container
      */
     public function process(ContainerBuilder $container)
     {
@@ -79,7 +79,7 @@ class ResolveInvalidReferencesPass implements CompilerPassInterface
      * Processes arguments to determin invalid references.
      *
      * @param array $arguments An array of Reference objects
-     * @param boolean $inMethodCall 
+     * @param boolean $inMethodCall
      */
     protected function processArguments(array $arguments, $inMethodCall = false)
     {

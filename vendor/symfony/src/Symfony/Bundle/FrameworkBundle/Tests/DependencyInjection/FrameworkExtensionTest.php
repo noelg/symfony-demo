@@ -75,7 +75,7 @@ abstract class FrameworkExtensionTest extends TestCase
         $this->assertTrue($container->getDefinition('session')->hasMethodCall('start'));
         $this->assertEquals('Session', $container->getParameter('session.class'));
         $this->assertEquals('session.storage.native', (string) $container->getAlias('session.storage'));
-        
+
         $options = $container->getParameter('session.storage.native.options');
         $this->assertEquals('_SYMFONY', $options['name']);
         $this->assertEquals(86400, $options['lifetime']);
